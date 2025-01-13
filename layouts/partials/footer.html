@@ -1,3 +1,29 @@
-{{- partial "lang.html" . -}}
+<ul>
+  {{ range .Site.RegularPages }}
+    <li>
+      <!-- Date -->
+      <span class="date text-muted" style="margin-left: 10px;">
+        {{ .Date.Format "Jan 2006" }}
+      </span>
+
+      <!-- Title -->
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+
+      <!-- Tags -->
+      {{ if .Params.tags }}
+
+        <span class="tag__link" style="color: var(--muted);">
+          [{{ range $index, $tag := .Params.tags }}
+            {{ if $index }}, {{ end }}
+            <a class="tag__link" href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}" style="color: var(--logo);">{{$tag}}</a>
+          {{ end }}]
+         
+        </span>
+      {{ end }}
+
+
+    </li>
+  {{ end }}
+</ul>
 <p class="copyright">{{ .Site.Copyright | markdownify }}</p>
-<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+<p class="advertisement">seek knowledge</p>
