@@ -149,7 +149,7 @@ pre,
 code, 
 kbd,
 samp {
-    background: var(--inner-bg) !important;
+    background: var(--off-bg) !important;
     font-family: var(--font-monospace);
     color: var(--off-fg);
 }
