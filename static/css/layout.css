@@ -43,6 +43,7 @@
     background-color: var(--off-bg);
     box-shadow: 0 0 0 1rem var(--off-bg);
     overflow-wrap: break-word;
+    margin-bottom: 10px;
 }
 
 .page__aside {
@@ -58,4 +59,8 @@
 /* Footer */
 .page__footer {
     grid-area: footer;
+}
+
+img {
+    width: 100%;
 }
